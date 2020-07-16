@@ -4,11 +4,15 @@ import java.io.StringReader;
 import java.util.Scanner;
 
 public class Main {
+    static {
+        System.out.println("block 1");
+    }
 
     public static void main(String[] args) {
 
-    	Reverse reverseString =new Reverse();
-		System.out.println(reverseString.reverse("i am pankaj"));
+//    	Reverse reverseString =new Reverse();
+//		System.out.println(reverseString.reverse("i am pankaj"));
+
 //	    Scanner sc =new Scanner(System.in);
 //	    String line = sc.nextLine();
 //	    String line = "i am pankaj";
@@ -35,24 +39,28 @@ public class Main {
 //		String l = sc.nextLine();
 //		System.out.println(l);
 
-//		System.out.println(reverseString("i am pankaj"));
+	System.out.println(reverseString("i am pankaj"));
     }
 
-//     static String reverseString(String s) {
-//    	int i = s.length()-1;
-//    	String ans = "";
-//    	while (i >=0) {
-//			while (i >= 0 && s.charAt(i) == ' ') i--;
-//			int j = i;
-//			if (i < 0) break;
-//			while (i >= 0 && s.charAt(i) != ' ') i--;
-//
-//			if (ans.isEmpty()) {
-//				ans =ans.concat(s.substring(i + 1, j + 1));
-//			} else {
-//				ans =ans.concat(" " + s.substring(i+1,j+1));
-//			}
-//    	}
-//    	return ans ;
-//    }
+    static {
+        System.out.println("block 2");
+    }
+
+     static String reverseString(String s) {
+    	int i = s.length()-1;
+    	String ans = "";
+    	while (i >=0) {
+			while (i >= 0 && s.charAt(i) == ' ') i--;
+			int j = i;
+			if (i < 0) break;
+			while (i >= 0 && s.charAt(i) != ' ') i--;
+
+			if (ans.isEmpty()) {
+				ans =ans.concat(s.substring(i + 1, j + 1));
+			} else {
+				ans =ans.concat(" " + s.substring(i+1,j+1));
+			}
+    	}
+    	return ans ;
+    }
 }
