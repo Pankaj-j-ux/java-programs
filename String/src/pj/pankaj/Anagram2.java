@@ -22,7 +22,6 @@ public class Anagram2 {
             int a= (int) str2.charAt(i);
             a2[a]++;
         }
-
         for (int i=0;i<256;i++) {
             if (a1[i]!= a2[i]) {
                 isAnagram=false;
@@ -31,14 +30,10 @@ public class Anagram2 {
                 isAnagram = true;
             }
         }
-
         if(isAnagram) {
             System.out.println("ANAGRAM");
         } else {
             System.out.println("NOT ANAGRAM");
         }
-
-
-
     }
 }
